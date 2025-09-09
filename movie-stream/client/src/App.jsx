@@ -1,6 +1,4 @@
-
-
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './index.css';
 const API_URL = 'http://localhost:5000/movies';
 
