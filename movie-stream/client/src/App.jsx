@@ -66,14 +66,14 @@ function App() {
         <input name="genre" placeholder="Genre" value={form.genre} onChange={handleChange} required className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 flex-1 min-w-[120px]" />
         <input name="release_year" type="number" placeholder="Year" value={form.release_year} onChange={handleChange} required className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-24" />
         <input name="rating" type="number" step="0.1" min="0" max="10" placeholder="Rating" value={form.rating} onChange={handleChange} required className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 w-20" />
-        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">{editId ? 'Update' : 'Add'} Movie</button>
+        <button type="submit" className="bg-black text-white px-4 py-2 rounded hover:bg-blue-700 transition">{editId ? 'Update' : 'Add'} Movie</button>
         {editId && (
           <button type="button" onClick={() => { setEditId(null); setForm({ title: '', director: '', genre: '', release_year: '', rating: '' }); }} className="bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition">Cancel</button>
         )}
       </form>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-          <thead className="bg-blue-600 text-white">
+          <thead className="bg-black text-white">
             <tr>
               <th className="py-3 px-4 text-left font-semibold">Title</th>
               <th className="py-3 px-4 text-left font-semibold">Director</th>
@@ -92,8 +92,8 @@ function App() {
                 <td className="py-2 px-4">{movie.release_year}</td>
                 <td className="py-2 px-4">{movie.rating}</td>
                 <td className="py-2 px-4">
-                  <button onClick={() => handleEdit(movie)} className="bg-yellow-400 text-white px-3 py-1 rounded mr-2 hover:bg-yellow-500 transition">Edit</button>
-                  <button onClick={() => handleDelete(movie.id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">Delete</button>
+                  <button onClick={() => handleEdit(movie)} className="bg-black text-white px-3 py-1 rounded mr-2 hover:bg-yellow-500 transition">Edit</button>
+                  <button onClick={() => handleDelete(movie.id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition">Clear</button>
                 </td>
               </tr>
             ))}
