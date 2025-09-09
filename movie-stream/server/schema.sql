@@ -8,3 +8,5 @@ CREATE TABLE IF NOT EXISTS movies (
   release_year INT NOT NULL,
   rating DECIMAL(2,1) NOT NULL
 );
+
+SELECT * FROM movies;
